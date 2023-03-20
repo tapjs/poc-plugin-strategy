@@ -1,0 +1,37 @@
+{
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/mjs/index.js",
+  "types": "./dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/mjs/index.d.ts",
+        "default": "./dist/mjs/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./test-base": {
+      "import": {
+        "types": "./dist/mjs/test-base.d.ts",
+        "default": "./dist/mjs/test-base.js"
+      },
+      "require": {
+        "types": "./dist/cjs/test-base.d.ts",
+        "default": "./dist/cjs/test-base.js"
+      }
+    }
+  },
+  "scripts": {
+    "preprepare": "rm -rf dist",
+    "prepare": "./src/build.ts ./src/test-template.ts ./src/plugin ./src/test.ts && tsc -p tsconfig.json && tsc -p tsconfig-esm.json",
+    "postprepare": "bash fixup.sh",
+    "pretest": "npm run prepare",
+    "presnap": "npm run prepare"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
+}

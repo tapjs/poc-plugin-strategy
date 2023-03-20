@@ -1,0 +1,1 @@
+{"version":3,"file":"less-than.d.ts","sourceRoot":"","sources":["../../../src/plugin/less-than.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,YAAY,EAAE,MAAM,iBAAiB,CAAA;AACxD,UAAU,YAAa,SAAQ,YAAY;IACzC,IAAI,CAAC,EAAE,OAAO,CAAA;CACf;AACD,QAAA,MAAM,QAAQ,MAAO,QAAQ,QAAQ,YAAY;UAEvC,OAAO;gBAID,MAAM,KAAK,MAAM;CAKvB,CAAA;AACV,eAAe,QAAQ,CAAA"}
