@@ -1,0 +1,35 @@
+ctor name Test
+ctor toString() class Test extends TestBase {
+    constructor(opts) {
+        super(opts);
+        return applyPlugins(this);
+    }
+    test(fn) {
+        fn(new Test(this.opts));
+    }
+}
+instanceof Test true
+keys [ 'publicThing', 'opts', 'orEq' ]
+has isEq true
+isEq undefined
+ok - expect to be less than
+lessThan(a, b) {
+        return (this.orEq ? a > b : a >= b)
+            ? t.fail('expect to be less than', this.lessThan)
+            : t.pass('expect to be less than');
+    }
+private thing
+ok - expect to be less than
+getting private GTs true
+[ 'is greater than', 123 ]
+not ok - expect to be greater than Error: trace
+    at file:///Users/isaacs/dev/tapjs/core/.lab/proxy/test/basic.mjs:16:11
+    at Test.test (/Users/isaacs/dev/tapjs/core/.lab/proxy/src/test.ts:149:5)
+    at file:///Users/isaacs/dev/tapjs/core/.lab/proxy/test/basic.mjs:15:7
+    at Test.test (/Users/isaacs/dev/tapjs/core/.lab/proxy/src/test.ts:149:5)
+    at file:///Users/isaacs/dev/tapjs/core/.lab/proxy/test/basic.mjs:12:3
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+getPrivateThing() {
+        return this.#privateThing;
+    }
+private thing
